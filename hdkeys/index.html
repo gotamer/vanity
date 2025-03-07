@@ -1,15 +1,139 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>go.hansaray.pw/hdkeys</title>
-		<meta name="go-import" content="go.hansaray.pw/hdkeys git https://github.com/gotamer/hdkeys.git">
-	</head>
-	<body>
+<html lang="en">
+<head>
+<title>hdkeys (Hierarchical Deterministic Keys)</title>
+<meta name="description" content="hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.">
+<meta name="keywords" content="nostr,nips,NIP05,NIP06,NIP19,bitcoin,BIP32,BIP39,BIP43,BIP44,BIP84,BIP86,BIP173,SLIP44,">
+<meta name="author" content="TaMeR">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="go-import" content="go.hansaray.pw/hdkeys git https://github.com/gotamer/hdkeys.git">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">hdkeys (Hierarchical Deterministic Keys)</h1>
+  <p class="w3-xlarge">hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.</p>
+</header>
+
+
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
 		<div>package: <code>go.hansaray.pw/hdkeys</code></div>
-		<div>source: <a href="https://github.com/gotamer/hdkeys.git">https://github.com/gotamer/hdkeys.git</a></div>
+		<div>source: <a href="https://github.com/gotamer/hdkeys">https://github.com/gotamer/hdkeys</a></div>
 		<div>godocs:<ul>
 			<li><a href="https://pkg.go.dev/go.hansaray.pw/hdkeys">go.hansaray.pw/hdkeys</a></li>
 		</ul></div>
-	</body>
+
+		<md-block>
+hdkeys
+======
+
+hdkeys is a library to create Bitcoin and Nostr secret and public account keys from the same mnemonic seeds, and a command-line tool that uses this library. It allows for the creation of keys, mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
+
+- hdkeys allows for the creation of mnemonic seeds, and Hierarchical Deterministic (HD) addresses.
+- hdkeys supports BIP39 passphrase protection for HD Wallets
+- hdkeys creates Bitcoin and Nostr keys/accounts from the same mnemonic seeds
+- hdkeys can create the WIF (Wallet Import Format), and decode private and public keys from WIF
+___________
+
+*   BIP32 - Hierarchical Deterministic Wallets
+*   BIP39 - Mnemonic code for generating deterministic keys
+*   BIP43 - Purpose Field for Deterministic Wallets
+*   BIP44 - Multi-Account Hierarchy for Deterministic Wallets
+*   BIP49 - Derivation scheme for P2WPKH-nested-in-P2SH based accounts
+*   BIP84 - Derivation scheme for P2WPKH based accounts
+*   BIP86 - Derivation scheme for Pay-to-Taproot (P2TR) based accounts
+*   BIP173 - Base32 address format for native v0-16 witness outputs
+*   SLIP44 - Registered coin types for BIP-0044
+*   [NIP05](https://nostr-nips.com/nip-05) - Mapping Nostr keys to DNS-based internet identifiers, HEX key output
+*   [NIP06](https://nostr-nips.com/nip-06) - Basic key derivation from mnemonic seed phrase
+*   [NIP19](https://nostr-nips.com/nip-19) - bech32-encoded entities (nsec, npub)
+___________
+
+Can I trust this code?
+----------------------
+
+&gt; Don&#39;t Trust. Verify.
+
+Install
+-------
+
+See [release](https://github.com/gotamer/hdkeys/releases) page for executables.
+
+
+Manual / help text
+------------------
+
+    hdkeys --help
+
+[help output](doc/help.txt)
+
+____________
+Examples
+--------
+
+### Wall Of Fame
+
+    hdkeys wof -pass &#34;&#34; -mnemonic &#34;leader monkey parrot ring guide accident before fence cannon height naive bean&#34; &gt; doc/wof.txt
+
+[wof output text](doc/wof.txt)
+
+Don&#39;t Trust Verify NIP06 [test vector](https://nostr-nips.com/nip-06#test-vectors)
+
+### Wallet Import Format
+    $ hdkeys wif L1VZ55UPgF83k4ndU8BBf62eM9prgo4coie5ttZrvS8GBzddzrhD &gt; doc/wif.txt
+
+[wif output text](doc/wif.txt)
+
+
+### json key set
+    $ hdkeys keyset -pass &#34;&#34; -mnemonic &#34;leader monkey parrot ring guide accident before fence cannon height naive bean&#34; &gt; doc/keyset.json
+
+[keyset output json](doc/keyset.json)
+
+___________
+
+Coders
+------
+Coders quick start: [link](doc/coders.md)
+
+License
+-------
+
+This repo is released under the [WTFPL](http://www.wtfpl.net/) – Do What the Fuck You Want to Public License.
+
+Base code stolen from
+---------------------
+
+[hdkeygen](https://github.com/modood/hdkeygen) with same license __Thank you [modood](https://github.com/modood)__
+</md-block>
+
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+<button class="w3-button w3-padding-large w3-large w3-margin-top">nostr</button><button class="w3-button w3-padding-large w3-large w3-margin-top">nips</button><button class="w3-button w3-padding-large w3-large w3-margin-top">NIP05</button><button class="w3-button w3-padding-large w3-large w3-margin-top">NIP06</button><button class="w3-button w3-padding-large w3-large w3-margin-top">NIP19</button><button class="w3-button w3-padding-large w3-large w3-margin-top">bitcoin</button><button class="w3-button w3-padding-large w3-large w3-margin-top">BIP32</button><button class="w3-button w3-padding-large w3-large w3-margin-top">BIP39</button><button class="w3-button w3-padding-large w3-large w3-margin-top">BIP43</button><button class="w3-button w3-padding-large w3-large w3-margin-top">BIP44</button><button class="w3-button w3-padding-large w3-large w3-margin-top">BIP84</button><button class="w3-button w3-padding-large w3-large w3-margin-top">BIP86</button><button class="w3-button w3-padding-large w3-large w3-margin-top">BIP173</button><button class="w3-button w3-padding-large w3-large w3-margin-top">SLIP44</button>
+</div>
+
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+<p>TaMeR</p>
+</footer>
+
+<script>
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</body>
 </html>
