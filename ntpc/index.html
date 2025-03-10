@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NTP Client</title>
+<meta name="description" content="Implementation of a trivial NTP client in Go">
+<meta name="keywords" content="ntp, RFC5905, client, ">
+<meta name="author" content="TaMeR">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="go-import" content="go.hansaray.pw/ntpc git https://github.com/gotamer/ntpc.git">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<header class="w3-container w3-black w3-center" style="padding:40px 16px">
+  <h1 class="w3-margin w3-xlarge">NTP Client</h1>
+  <p>Implementation of a trivial NTP client in Go</p>
+</header>
+
+
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+		<div>package: <code>go.hansaray.pw/ntpc</code></div>
+		<div>source: clone <a href="https://github.com/gotamer/ntpc">https://github.com/gotamer/ntpc.git</a></div>
+		<div>godocs:<ul>
+			<li><a href="https://pkg.go.dev/go.hansaray.pw/ntpc">go.hansaray.pw/ntpc</a></li>
+		</ul></div>
+
+    <p><a href="https://pkg.go.dev/github.com/gotamer/ntpc?tab=doc"><img src="https://img.shields.io/badge/GoDoc-Reference-blue?style=for-the-badge&amp;logo=go" alt="GoDoc" /></a></p>
+
+<h1>A trivial NTP Client</h1>
+
+<p>This repository is an implementation of a (really) trivial NTP client in Go. It uses the <code>encoding/binary</code> package to encode and decode NTP packets sent to and received from a remote NTP server over UDP. You can learn more about NTP here, read the specs RFC5905, and find a (seemingly) way better Go NTP client, with many features implemented, <a href="https://github.com/beevik/ntp">here</a>.</p>
+
+<p>This is a fork of Vladimir Vivien&rsquo;s go-ntp-client. (Thank you Vladimir)</p>
+
+<h4>I added following items to make it actually useful:</h4>
+
+<ul>
+<li>syslog</li>
+<li>local date update.</li>
+</ul>
+
+<p>I use it to periodically update my Linux laptop system time.
+On my system it runs once an hour via a cron job.</p>
+
+<p>The original code is explained by Vladimir Vivien in this writeup titled <a href="https://medium.com/learning-the-go-programming-language/lets-make-an-ntp-client-in-go-287c4b9a969f">Let&rsquo;s make an NTP client in Go</a>.</p>
+
+
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+<button class="w3-button w3-padding-large w3-large w3-margin-top">ntp</button><button class="w3-button w3-padding-large w3-large w3-margin-top">RFC5905</button><button class="w3-button w3-padding-large w3-large w3-margin-top">client</button>
+</div>
+
+<footer class="w3-container w3-center w3-padding-64">  
+	<p>© <a href="http://tamer.pw">TaMeR</a></p>
+</footer>
+
+<script>
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>
