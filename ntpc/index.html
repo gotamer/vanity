@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <title>NTP Client</title>
-<meta name="description" content="Implementation of a trivial NTP client in Go">
-<meta name="keywords" content="ntp, RFC5905, client, ">
+<meta name="description" content="Implementation of an NTP client in Go">
+<meta name="keywords" content="ntp, RFC5905, client, golang, ">
 <meta name="author" content="TaMeR">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +13,19 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
+  </div>
+</div>
+
+
 <header class="w3-container w3-black w3-center" style="padding:40px 16px">
   <h1 class="w3-margin w3-xlarge">NTP Client</h1>
-  <p>Implementation of a trivial NTP client in Go</p>
+  <p>Implementation of an NTP client in Go</p>
 </header>
 
 
@@ -29,9 +39,9 @@
 
     <p><a href="https://pkg.go.dev/github.com/gotamer/ntpc?tab=doc"><img src="https://img.shields.io/badge/GoDoc-Reference-blue?style=for-the-badge&amp;logo=go" alt="GoDoc" /></a></p>
 
-<h1>A trivial NTP Client</h1>
+<h1>NTP Client</h1>
 
-<p>This repository is an implementation of a (really) trivial NTP client in Go. It uses the <code>encoding/binary</code> package to encode and decode NTP packets sent to and received from a remote NTP server over UDP. You can learn more about NTP here, read the specs RFC5905, and find a (seemingly) way better Go NTP client, with many features implemented, <a href="https://github.com/beevik/ntp">here</a>.</p>
+<p>This repository is an implementation of a simple NTP client in Go. It uses the <code>encoding/binary</code> package to encode and decode NTP packets sent to and received from a remote NTP server over UDP.</p>
 
 <p>This is a fork of Vladimir Vivien&rsquo;s go-ntp-client. (Thank you Vladimir)</p>
 
@@ -52,7 +62,7 @@ On my system it runs once an hour via a cron job.</p>
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-<button class="w3-button w3-padding-large w3-large w3-margin-top">ntp</button><button class="w3-button w3-padding-large w3-large w3-margin-top">RFC5905</button><button class="w3-button w3-padding-large w3-large w3-margin-top">client</button>
+<button class="w3-button w3-padding-large w3-large w3-margin-top">ntp</button><button class="w3-button w3-padding-large w3-large w3-margin-top">RFC5905</button><button class="w3-button w3-padding-large w3-large w3-margin-top">client</button><button class="w3-button w3-padding-large w3-large w3-margin-top">golang</button>
 </div>
 
 <footer class="w3-container w3-center w3-padding-64">  
