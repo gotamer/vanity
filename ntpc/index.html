@@ -47,21 +47,20 @@
 
 <h1>NTP Client</h1>
 
-<p>This repository is an implementation of a simple NTP client in Go. It uses the <code>encoding/binary</code> package to encode and decode NTP packets sent to and received from a remote NTP server over UDP.</p>
+<p>This is an implementation of a simple NTP client in Go. It uses the <code>encoding/binary</code> package to encode and decode NTP packets sent to and received from a remote NTP server over UDP.</p>
 
-<p>This is a fork of Vladimir Vivien&rsquo;s go-ntp-client. (Thank you Vladimir)</p>
-
-<h4>I added following items to make it actually useful:</h4>
+<p>It also does:</p>
 
 <ul>
-<li>syslog</li>
-<li>local date update.</li>
+<li>log via linux syslog</li>
+<li>local date update</li>
 </ul>
 
 <p>I use it to periodically update my Linux laptop system time.
 On my system it runs once an hour via a cron job.</p>
 
-<p>The original code is explained by Vladimir Vivien in this writeup titled <a href="https://medium.com/learning-the-go-programming-language/lets-make-an-ntp-client-in-go-287c4b9a969f">Let&rsquo;s make an NTP client in Go</a>.</p>
+<p>This is a fork of Vladimir Vivien&rsquo;s go-ntp-client. (Thank you Vladimir)<br>
+The original code is explained by Vladimir Vivien in this writeup titled <a href="https://medium.com/learning-the-go-programming-language/lets-make-an-ntp-client-in-go-287c4b9a969f">Let&rsquo;s make an NTP client in Go</a>.</p>
 
 
   </div>
