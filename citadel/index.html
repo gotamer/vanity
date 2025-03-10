@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Citadel Client</title>
+<meta name="description" content="Library to access Citadel email and collaboration servers from Go, and a command-line tool that uses this library to sync data with the server.">
+<meta name="keywords" content="email, groupware, vCard, vNotes, vCalendar, ">
+<meta name="author" content="TaMeR">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="go-import" content="go.hansaray.pw/citadel git https://github.com/gotamer/citadel.git">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<header class="w3-container w3-black w3-center" style="padding:40px 16px">
+  <h1 class="w3-margin w3-xlarge">Citadel Client</h1>
+  <p>Library to access Citadel email and collaboration servers from Go, and a command-line tool that uses this library to sync data with the server.</p>
+</header>
+
+
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+		<div>package: <code>go.hansaray.pw/citadel</code></div>
+		<div>source: clone <a href="https://github.com/gotamer/citadel">https://github.com/gotamer/citadel.git</a></div>
+		<div>godocs:<ul>
+			<li><a href="https://pkg.go.dev/go.hansaray.pw/citadel">go.hansaray.pw/citadel</a></li>
+		</ul></div>
+
+    <h1>Citadel Client</h1>
+
+<p><a href="https://godoc.org/github.com/gotamer/citadel"><img src="https://godoc.org/github.com/gotamer/citadel?status.png" alt="GoDoc" /></a></p>
+
+<p>If you are looking for the citadelsync application go here:
+<a href="https://github.com/gotamer/citadel/tree/master/citadelsync">citadelsync folder</a></p>
+
+<p>This is a library to access the <a href="http://www.citadel.org" title="Citadel">Citadel</a> email and collaboration servers from Go using the <a href="http://www.citadel.org" title="Citadel">Citadel</a> Protocol.</p>
+
+<hr>
+
+<h4>Features impemented</h4>
+
+<ul>
+<li><p>Users</p>
+
+<ul>
+<li>Create</li>
+<li>Login</li>
+<li>Logout</li>
+<li>Change Password</li>
+</ul></li>
+
+<li><p>Floors</p>
+
+<ul>
+<li>List all floors <em>with id, name and count of rooms</em></li>
+</ul></li>
+
+<li><p>Rooms</p>
+
+<ul>
+<li>List all rooms</li>
+<li>List public rooms</li>
+</ul></li>
+
+<li><p>Room</p>
+
+<ul>
+<li>Goto room</li>
+<li>Stat room</li>
+</ul></li>
+
+<li><p>Messages</p>
+
+<ul>
+<li>Read Message</li>
+<li>Parse vCard, vNotes and vCalendar files</li>
+</ul></li>
+</ul>
+
+<p><em>See <a href="https://godoc.org/github.com/gotamer/citadel">GoDoc</a> for complete list</em></p>
+
+<hr>
+
+<h4>Install</h4>
+
+<h5>First install Go</h5>
+
+<ul>
+<li><a href="http://golang.org/doc/install#tarball">Linux and FreeBSD</a></li>
+<li><a href="http://golang.org/doc/install#osx">Mac OS X</a></li>
+<li><a href="http://golang.org/doc/install#windows">Windows MSI installer</a></li>
+</ul>
+
+<h5>With go installed run</h5>
+<pre tabindex="0" class="chroma"><code><span class="line"><span class="cl">go get bitbucket.org/gotamer/citadel
+</span></span></code></pre>
+
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+<button class="w3-button w3-padding-large w3-large w3-margin-top">email</button><button class="w3-button w3-padding-large w3-large w3-margin-top">groupware</button><button class="w3-button w3-padding-large w3-large w3-margin-top">vCard</button><button class="w3-button w3-padding-large w3-large w3-margin-top">vNotes</button><button class="w3-button w3-padding-large w3-large w3-margin-top">vCalendar</button>
+</div>
+
+<footer class="w3-container w3-center w3-padding-64">  
+	<p>© <a href="http://tamer.pw">TaMeR</a></p>
+</footer>
+
+<script>
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>
