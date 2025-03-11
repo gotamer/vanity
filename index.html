@@ -1,15 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>gotamer</title>
-<meta name="description" content="gotamer Go code index">
-<meta name="keywords" content="tamer, gotamer, golang">
+<title>GoTamer Go Packages</title>
+<meta name="description" content="GoTamer Go Packages">
+<meta name="keywords" content="golang, GoTamer, tamer">
 <meta name="author" content="TaMeR">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="menu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
+    <a href="https://blog.tamer.pw/" class="w3-bar-item w3-button w3-padding-large w3-black">Blog</a>
+    <a href="http://www.tamer.pw/" class="w3-bar-item w3-button w3-padding-large w3-black">Contact</a>
+  </div>
+
+
+  <div id="navid" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="https://blog.tamer.pw/" class="w3-bar-item w3-button w3-padding-large">Blog</a>
+    <a href="http://www.tamer.pw/" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+  </div>
+</div>
 
 <header class="w3-container w3-black w3-center" style="padding:30px 16px">
   <p class="w3-xlarge">GoTamer GoLang Packages</p>
@@ -29,5 +46,17 @@
 	<p>© <a href="http://tamer.pw">TaMeR</a></p>
 </footer>
 
+<script>
+
+function menu() {
+  var x = document.getElementById("navid");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </body>
 </html>
+

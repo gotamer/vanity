@@ -17,14 +17,14 @@
 
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="menu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="/" class="w3-bar-item w3-button w3-padding-large w3-black">Home</a>
     <a href="https://blog.tamer.pw/" class="w3-bar-item w3-button w3-padding-large w3-black">Blog</a>
-    <a href="http://www.tamer.pw/" class="w3-bar-item w3-button w3-padding-large w3-black">Contcat</a>
+    <a href="http://www.tamer.pw/" class="w3-bar-item w3-button w3-padding-large w3-black">Contact</a>
   </div>
 
 
-  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-large">
+  <div id="navid" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="https://blog.tamer.pw/" class="w3-bar-item w3-button w3-padding-large">Blog</a>
     <a href="http://www.tamer.pw/" class="w3-bar-item w3-button w3-padding-large">Contact</a>
   </div>
@@ -69,15 +69,14 @@ The original code is explained by Vladimir Vivien in this writeup titled <a href
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
 <button class="w3-button w3-padding-large w3-large w3-margin-top">ntp</button><button class="w3-button w3-padding-large w3-large w3-margin-top">RFC5905</button><button class="w3-button w3-padding-large w3-large w3-margin-top">client</button><button class="w3-button w3-padding-large w3-large w3-margin-top">golang</button>
 </div>
-
 <footer class="w3-container w3-center w3-padding-64">  
 	<p>© <a href="http://tamer.pw">TaMeR</a></p>
 </footer>
 
 <script>
 
-function myFunction() {
-  var x = document.getElementById("navDemo");
+function menu() {
+  var x = document.getElementById("navid");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else { 
@@ -87,3 +86,4 @@ function myFunction() {
 </script>
 </body>
 </html>
+
