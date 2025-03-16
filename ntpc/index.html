@@ -39,12 +39,14 @@
 
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-		<div>Name: ntpc</div>
-		<div>Package: go.hansaray.pw/ntpc</div>
-		<div>Source: <a href="github.com/gotamer/ntpc.git">github.com/gotamer/ntpc.git</a></div>
-		<div>Docs: <a href="https://pkg.go.dev/go.hansaray.pw/ntpc">https://pkg.go.dev/go.hansaray.pw/ntpc</a></div>
-		<div>Version: </div>
-		<div>License: MIT</div>
+		<h2>ntpc</h2>
+		<div>
+			<a class="w3-btn w3-black w3-round-large" href="github.com/gotamer/ntpc.git">Source Code</a>
+			<a class="w3-btn w3-black w3-round-large" href="https://pkg.go.dev/go.hansaray.pw/ntpc">API Documentation</a>
+		</div>
+		<p>Package: go.hansaray.pw/ntpc</p>
+		<p>Version: </p>
+		<p>License: MIT</p>
 	<hr>
     <h1>NTP Client</h1>
 
@@ -63,7 +65,36 @@
 
 <p>I use it to periodically update my Linux laptop system time.
 On my system it runs once an hour via a cron job.</p>
-
+<pre tabindex="0" class="chroma"><code><span class="line"><span class="cl">// NTP packet format (v3 with optional v4 fields removed)
+</span></span><span class="line"><span class="cl">//
+</span></span><span class="line"><span class="cl">// 0                   1                   2                   3
+</span></span><span class="line"><span class="cl">// 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |LI | VN  |Mode |    Stratum     |     Poll      |  Precision   |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |                         Root Delay                            |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |                         Root Dispersion                       |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |                          Reference ID                         |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +                     Reference Timestamp (64)                  +
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +                      Origin Timestamp (64)                    +
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +                      Receive Timestamp (64)                   +
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +                      Transmit Timestamp (64)                  +
+</span></span><span class="line"><span class="cl">// |                                                               |
+</span></span><span class="line"><span class="cl">// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></span></code></pre>
 <p>This is a fork of Vladimir Vivien&rsquo;s go-ntp-client. (Thank you Vladimir)<br>
 The original code is explained by Vladimir Vivien in this writeup titled <a href="https://medium.com/learning-the-go-programming-language/lets-make-an-ntp-client-in-go-287c4b9a969f">Let&rsquo;s make an NTP client in Go</a></p>
 
